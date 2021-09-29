@@ -1,7 +1,14 @@
 \documentclass{article}
 
-\usepackage[margin=.75in,tmargin=.5in]{geometry} % For margins
+\usepackage[margin=.75in]{geometry} % For margins
 \usepackage{hyperref} % For hyperlinks
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=blue,
+	urlcolor=blue,
+	citecolor=black,
+}
 \usepackage{color, soul} % For highlighting
 \usepackage{titlesec}
 \usepackage{enumitem} % For removing list indent
@@ -45,7 +52,9 @@
 }
 
 \newcommand\halftextbox[1]{%
+	%\begin{raggedright}
   \parbox[t]{.475\textwidth}{#1}%
+	%\end{raggedright}
 }
 
 \newcommand\spacetextbox[1]{%
@@ -64,7 +73,7 @@
 
 %https://tex.stackexchange.com/questions/10684/vertical-space-in-lists
 \newenvironment{CustomItemize}
-{ \begin{itemize}[leftmargin=0em]
+{ \begin{itemize}[leftmargin=1em]
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
     \setlength{\parindent}{0pt}
@@ -93,24 +102,32 @@ RICHARD WILLIAM McCOY (WILL)
 
 %\title Richard William McCoy (Will)
 
+\vspace{.25em}
 \section{Education}
 
 \noindent
 \halftextbox{
+\begin{raggedright}
 \subsection{University of Florida,  Gainesville, FL}
 \begin{CustomItemize}
 \item Class of 2024, Second year, 85 credits
-\item Student of Bachelor of Science in Electrical Engineering, University of Florida
-\item Student of Bachelor of Science in Computer Science, University of Florida
-\item Student of Minor of Mathematics, University of Florida
+\item Student of Bachelor of Science in Electrical Engineering
+\item Student of Bachelor of Science in Computer Science
+\item Student of Minor of Mathematics
 \item Overall GPA: 4.0, Major GPA: 4.0
 \end{CustomItemize}
+
+\vspace{.94em}
+\subsection{Relevant Coursework}
+\subsubsection{Electrical Engineering}
+Circuits 1
 %\hfill
+\end{raggedright}
 }
 \spacetextbox{\hfil\hfil}
 \halftextbox{
 %\hfill
-\subsection{Relevant Coursework}
+\begin{raggedright}
 \subsubsection{Mathematics}
 Differential Equations, 
 Calculus III,
@@ -122,15 +139,13 @@ Discrete Mathematics
 C++ Programming,
 Data Structures
 
-\subsubsection{Electrical Engineering}
-Circuits 1
-
 \subsubsection{Other}
 Professional Communications for Engineers,
 Undergraduate Research
 
-\subsection{Current Semester’s Relevant Coursework}
+\subsection{Current Semester's Relevant Coursework}
 Digital Logic (FPGA/VHDL), EE Physics, Software Engineering
+\end{raggedright}
 }
 
 %\hl{
@@ -142,50 +157,50 @@ Digital Logic (FPGA/VHDL), EE Physics, Software Engineering
 %(Java), AP/IB Physics 1\&2, AP Statistics, AP/IB Chemistry
 %}
 
+\vspace{.25em}
+
 \section{Work Experience}
 
-\subsection{Garreet Lab - Paid Undergraduate Assistant Researcher (Current)}
+\subsection{Garrett Lab - Paid Undergraduate Assistant Researcher (Current)}
 \begin{CustomItemize}
-\item Programmer and modeler for project simulating seed systems in Ethiopia.
-\item Models use impact network analysis, an appplication of graph theory.
-\item Working with team of 3, writing paper, goal is to publish in journal.
+\item Program and model in R for project simulating seed systems in Ethiopia.
+\item Utilize impact network analysis, an appplication of graph theory.
+\item Work with team of 3, writing paper to be published in research journal.
 \end{CustomItemize}
 
-\subsection{Personal - Published Research (Spring 2021)}
+\subsection{University of Florida - Published Research (Spring 2021)}
 \begin{CustomItemize}
-\item Led team of three in researching batch testing, a technique to minimize the number of disease tests.
-\item Head authored paper on topic, will be published in UF Journal of Undergraduate Research in the winter.
-\item Proposed method was shown to be more efficient than comparable models under COVID-like conditions.
+\item Led team of three in researching batch testing, a technique used to minimize the number of disease tests.
+\item Head authored paper to be published in UF Journal of Undergraduate Research by year-end 2021.
+\item Proposed method which was shown to be more efficient than comparable models under COVID-like conditions.
 \item Wrote simulation in Java with C++ JNI components, analyzed output and generated graphics with R.
 \end{CustomItemize}
 
-\subsection{Winsight – Programming Job (Winter 2020 to Summer 2021)}
+\subsection{Winsight - Programmer (Winter 2020 to Summer 2021)}
 \begin{CustomItemize}
-\item Working for startup which seeks to integrate live streaming into youth sports.
-\item Coding for website, mobile app, and backend (React, React Native, and AWS respectively).
+\item Programmed for startup which seeks to integrate live streaming into youth sports.
+\item Utilized React for website, React Native for mobile app, and AWS for backend.
 \item Created interface for high-level administration of infrastructure and users.
-\item Remote worker, agile methodology, part time, 5-10 hours per week.
+\item Worked remotely using agile methodology.
 \end{CustomItemize}
 
-\subsection{Duos Technology – Engineering paid internship (Summer 2020)}
+\subsection{Duos Technology - Engineering paid internship (Summer 2020)}
 \begin{CustomItemize}
-\item Shadowed Electrical Engineers, where working on a product which ``scanned'' rail cars for defects.
+\item Shadowed Electrical Engineers working on a product which ``scanned'' rail cars for defects.
 \item Performed destructive failure analysis on damaged scanner unit.
-\item Worked on ground truth team label images of rail cars.
+\item Worked with ground truth team to label images of rail cars.
 \item Wrote program on Raspberry Pi which provides a HTTP REST API to control lights in the scanner.
 \end{CustomItemize}
 
-\subsection{US Navy – Science and Engineering Apprenticeship Program (SEAP) paid internship (Summer 2019)}
+\subsection{US Navy - Science and Engineering Apprenticeship Program (SEAP) paid internship (Summer 2019)}
 \begin{CustomItemize}
-
-\item Shadowed Mechanical, Electrical, Chemical, and Material Engineers at the Fleet Readiness Center Southeast item at Naval Air Station Jacksonville.
+\item Shadowed Mechanical, Electrical, Chemical, and Material Engineers at the Fleet Readiness Center Southeast at Naval Air Station Jacksonville.
 \item Wrote computer program to analyze time lapses of lengthy chemical reactions to determine their completion.
 \item Delivered presentations of findings and experiences to engineers and other interns on a biweekly basis.
 \end{CustomItemize}
 
-\subsection{Genesee-Wyoming Railroad Company – Internship (Summer 2018)}
+\subsection{Genesee-Wyoming Railroad Company - Internship (Summer 2018)}
 \begin{CustomItemize}
-
 \item Shadowed several engineers while learning about the workings of their department, railroad track maintenance, and railroad regulations.
 \item Engaged with engineers on civil engineering in the railroad industry and the digital modeling of planned track.
 \end{CustomItemize}
@@ -197,6 +212,7 @@ Digital Logic (FPGA/VHDL), EE Physics, Software Engineering
 %Leadership positions include Senior Patrol Leader, Scribe, Troop Guide, Instructor, and Assistant SPL
 %}
 
+\vspace{.25em}
 \section{Awards and Honors}
 
 \subsubsection{Eagle Scout}
@@ -204,19 +220,28 @@ Boy Scouts of America,
 designed and led construction of two softball dugouts for project
 
 \subsubsection{2020 National Merit Scholar}
-Recipient of the Benacquisto Scholarship (Full Ride) to the University of Florida
+Recipient of the Benacquisto Scholarship to the University of Florida
 %National AP Scholar and AP Scholar with Distinction - Score of 5 on sixteen AP Exams
 
+\vspace{.25em}
 \section{Additional Skills}
+
+\noindent\halftextbox{
+
 \begin{CustomItemize}
 %\item Data analysis using Excel and other spreadsheet programs
-\item Fluency: Java, C, C++; Competency: JavaScript/TypeScript, HTML, CSS, \LaTeX{}, MATLAB, R, SQL
-\item Experienced with Linux, git, and Microsoft Office
-\item 3D parametric modeling and printing
-\item Hobbyist electronics, including Arduino, ESP8266, and Raspberry Pi
-
+\item Fluency: Java, C, C++
+\item Competency: JavaScript/TypeScript, HTML, CSS, \LaTeX{}, MATLAB, R, SQL
 \end{CustomItemize}
-
+\hfill}
+\spacetextbox{\hfil\hfil}
+\halftextbox{\hfill
+\begin{CustomItemize}
+\item Linux, git, and Microsoft Office
+\item 3D parametric modeling and printing
+\item Arduino, ESP8266, and Raspberry Pi
+\end{CustomItemize}
+}
 %\section{Community Service}
 %\begin{CustomItemize}
 %\item Buddy at Camp I Am Special in the summers of 2017, 2018 and 2019 for a total of 363 service hours
