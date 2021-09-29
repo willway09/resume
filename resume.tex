@@ -1,0 +1,226 @@
+\documentclass{article}
+
+\usepackage[margin=.75in,tmargin=.5in]{geometry} % For margins
+\usepackage{hyperref} % For hyperlinks
+\usepackage{color, soul} % For highlighting
+\usepackage{titlesec}
+\usepackage{enumitem} % For removing list indent
+
+\setlength{\parskip}{0em}
+
+\titleformat{\section}
+{\bfseries\Large\centering}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{}
+{0em}
+{}
+
+
+\titleformat{\subsubsection}[runin]
+{\bfseries\normalsize}
+{}
+{0em}
+{}[:\hspace{10em}]
+
+\titlespacing{\section} {0em} {0em} {.3em}
+\titlespacing{\subsection} {0em} {0em} {0em}
+\titlespacing{\subsubsection} {0em} {0em} {.25em}
+
+%https://tex.stackexchange.com/questions/55472/how-to-make-text-aligned-left-center-right-in-the-same-line
+%\newcommand\textbox[1]{%
+  %\parbox{.333\textwidth}{#1}%
+%}
+
+\newcommand\midtextbox[1]{%
+  \parbox{.6\textwidth}{#1}%
+}
+
+\newcommand\outtextbox[1]{%
+  \parbox{.2\textwidth}{#1}%
+}
+
+\newcommand\halftextbox[1]{%
+  \parbox[t]{.475\textwidth}{#1}%
+}
+
+\newcommand\spacetextbox[1]{%
+  \parbox{.05\textwidth}{#1}%
+}
+
+%https://tex.stackexchange.com/questions/342790/how-to-remove-the-extra-lines-between-the-items-in-the-enumerate-environment-and
+
+\setlist[itemize]{
+  %label={\upshape(\roman*)},
+  %leftmargin=0pt‌​,
+  %labelwidth=*,
+  %align=‌​left,
+  nosep
+}
+
+%https://tex.stackexchange.com/questions/10684/vertical-space-in-lists
+\newenvironment{CustomItemize}
+{ \begin{itemize}[leftmargin=0em]
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parindent}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+%https://tex.stackexchange.com/questions/74212/how-can-i-change-the-whitespace-above-and-below-center
+\newenvironment{TitleCenter}[1][\topsep]
+  {\setlength{\topsep}{#1}\par\kern\topsep\centering}% \begin{mycenter}[<len>]
+  {\par\kern\topsep}% \end{mycenter}
+\setlength{\parindent}{0pt}% Just for this MWE
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{TitleCenter}[0em]
+\bfseries\huge
+
+%\parskip{0em}
+%\parsep{0em}
+RICHARD WILLIAM McCOY (WILL)
+\end{TitleCenter}
+\noindent\outtextbox{\href{willway@outlook.com}{willway@outlook.com}\hfill}\midtextbox{\hfil8042 Lakecrest Drive, Jacksonville, FL 32256\hfil}\outtextbox{\hfill (904) 228-3384}
+
+%\title Richard William McCoy (Will)
+
+\section{Education}
+
+\noindent
+\halftextbox{
+\subsection{University of Florida,  Gainesville, FL}
+\begin{CustomItemize}
+\item Class of 2024, Second year, 85 credits
+\item Student of Bachelor of Science in Electrical Engineering, University of Florida
+\item Student of Bachelor of Science in Computer Science, University of Florida
+\item Student of Minor of Mathematics, University of Florida
+\item Overall GPA: 4.0, Major GPA: 4.0
+\end{CustomItemize}
+%\hfill
+}
+\spacetextbox{\hfil\hfil}
+\halftextbox{
+%\hfill
+\subsection{Relevant Coursework}
+\subsubsection{Mathematics}
+Differential Equations, 
+Calculus III,
+Engineering Statistics, 
+Linear Algebra,
+Discrete Mathematics
+
+\subsubsection{Computer Science}
+C++ Programming,
+Data Structures
+
+\subsubsection{Electrical Engineering}
+Circuits 1
+
+\subsubsection{Other}
+Professional Communications for Engineers,
+Undergraduate Research
+
+\subsection{Current Semester’s Relevant Coursework}
+Digital Logic (FPGA/VHDL), EE Physics, Software Engineering
+}
+
+%\hl{
+%Stanton College Preparatory School, Class of 2020, Jacksonville, FL
+%International Baccalaureate Diploma Programme graduate
+%Weighted GPA: 4.94
+%35 on ACT; 1530 on SAT (770 Math and 760 Evidence-Based Reading and Writing)
+%Relevant Coursework: AP Calculus AB and BC, AP Physics C Mechanics and E\&M, AP/IB Computer Science
+%(Java), AP/IB Physics 1\&2, AP Statistics, AP/IB Chemistry
+%}
+
+\section{Work Experience}
+
+\subsection{Garreet Lab - Paid Undergraduate Assistant Researcher (current)}
+\begin{CustomItemize}
+\item Programmer and modeler for project simulating seed systems in Ethiopia.
+\item Models use impact network analysis, an appplication of graph theory.
+\item Working with team of 3, writing paper, goal is to publish in journal.
+\end{CustomItemize}
+
+\subsection{Personal - Published Research (Spring 2021)}
+\begin{CustomItemize}
+\item Led team of three in researching batch testing, a technique to minimize the number of disease tests.
+\item Head authored paper on topic, will be published in UF Journal of Undergraduate Research in the winter.
+\item Proposed method was shown with to be more efficient than comparable models under COVID-like conditions.
+\item Wrote simulation in Java with C++ JNI components, analyzed output and generated graphics with R.
+\end{CustomItemize}
+
+\subsection{Winsight – Programming Job (Winter 2020 to Summer 2021)}
+\begin{CustomItemize}
+\item Working for startup which seeks to integrate live streaming into youth sports.
+\item Coding for website, mobile app, and backend (React, React Native, and AWS respectively).
+\item Created interface for high-level administration of infrastructure and users.
+\item Remote worker, agile methodology, part time, 5-10 hours per week.
+\end{CustomItemize}
+
+\subsection{Duos Technology – Engineering paid internship (Summer 2020)}
+\begin{CustomItemize}
+\item Shadowed Electrical Engineers, where working on a product which ``scanned'' rail cars for defects.
+\item Performed destructive failure analysis on damaged scanner unit.
+\item Worked on ground truth team label images of rail cars.
+\item Wrote program on Raspberry Pi which provides a HTTP REST API to control lights in the scanner.
+\end{CustomItemize}
+
+\subsection{US Navy – Science and Engineering Apprenticeship Program (SEAP) paid internship (Summer 2019)}
+\begin{CustomItemize}
+
+\item Shadowed Mechanical, Electrical, Chemical, and Material Engineers at the Fleet Readiness Center Southeast item at Naval Air Station Jacksonville.
+\item Wrote computer program to analyze time lapses of lengthy chemical reactions to determine their completion.
+\item Delivered presentations of findings and experiences to engineers and other interns on a biweekly basis.
+\end{CustomItemize}
+
+\subsection{Genesee-Wyoming Railroad Company – Internship (Summer 2018)}
+\begin{CustomItemize}
+
+\item Shadowed several engineers while learning about the workings of their department, railroad track maintenance, and railroad regulations.
+\item Engaged with engineers on civil engineering in the railroad industry and the digital modeling of planned track.
+\end{CustomItemize}
+
+%\section{Activities and Achievements}
+
+%\hl{
+%Member of North Florida Council Troop 27 from 2013 to 2019
+%Leadership positions include Senior Patrol Leader, Scribe, Troop Guide, Instructor, and Assistant SPL
+%}
+
+\section{Awards and Honors}
+
+\subsubsection{Eagle Scout}
+Boy Scouts of America,
+designed and led construction of two softball dugouts for project
+
+\subsubsection{2020 National Merit Scholar}
+Recipient of the Benacquisto Scholarship (Full Ride) to the University of Florida
+%National AP Scholar and AP Scholar with Distinction - Score of 5 on sixteen AP Exams
+
+\section{Additional Skills}
+\begin{CustomItemize}
+%\item Data analysis using Excel and other spreadsheet programs
+\item Fluency: Java, C, C++; Competency: JavaScript/TypeScript, HTML, CSS, \LaTeX{}, MATLAB, R, SQL
+\item Experienced with Linux, git, and Microsoft Office
+\item 3D parametric modeling and printing
+\item Hobbyist electronics, including Arduino, ESP8266, and Raspberry Pi
+
+\end{CustomItemize}
+
+%\section{Community Service}
+%\begin{CustomItemize}
+%\item Buddy at Camp I Am Special in the summers of 2017, 2018 and 2019 for a total of 363 service hours
+%\item Led own Eagle Scout Project to construct two dugouts for Holy Family Catholic School, as well as other various Eagle projects, including installing and painting fences and building benches
+%\end{CustomItemize}
+
+\end{document}
