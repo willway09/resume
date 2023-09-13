@@ -1,4 +1,4 @@
-resume.aux
-resume.log
-resume.out
-resume.pdf
+*.aux
+*.log
+*.out
+*.pdf
