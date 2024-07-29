@@ -12,6 +12,7 @@
 \usepackage{color, soul} % For highlighting
 \usepackage{titlesec}
 \usepackage{enumitem} % For removing list indent
+\usepackage{setspace}
 
 \setlength{\parskip}{0em}
 
@@ -61,7 +62,7 @@
   \parbox{.05\textwidth}{#1}%
 }
 
-\newcommand{\sectionspacing}{\vspace{-.4em}} %Edit spacing here to fit to page
+\newcommand{\sectionspacing}{\vspace{-0em}} %Edit spacing here to fit to page
 
 %https://tex.stackexchange.com/questions/342790/how-to-remove-the-extra-lines-between-the-items-in-the-enumerate-environment-and
 
@@ -88,6 +89,8 @@
   {\par\kern\topsep}% \end{mycenter}
 \setlength{\parindent}{0pt}% Just for this MWE
 
+% This configure the inter-line spacing, which is a useful parameter to vary
+\spacing{.95}
 
 \begin{document}
 
@@ -115,9 +118,9 @@ RICHARD WILLIAM McCOY (WILL)
 \subsection{University of Florida,  Gainesville, FL}
 \begin{CustomItemize}
 \item \underline{Overall GPA: 4.0}, Major GPA: 4.0
-\item Class of 2024, Senior, 158 credits
+\item Fall Class of 2025, Senior, 171 credits
 \item Student of Bachelor of Science in Electrical Engineering
-%\item Student of Bachelor of Science in Computer Science
+\item Student of Bachelor of Science in Computer Science
 %\item Student of Minor of Mathematics
 \end{CustomItemize}
 
@@ -133,7 +136,9 @@ Foundations of DSP,
 Electromagnetic Fields 1 and 2,
 Microprocessors,
 Digital Design,
-Reconfigurable Computing
+Reconfigurable Computing,
+Communication Systems,
+Wireless and Mobile Networks
 %\hfill
 \end{raggedright}
 }
@@ -180,23 +185,39 @@ Integrated Poduct and Process Design
 \sectionspacing{}
 
 \section{Work Experience}
-\subsection{VerdeGo Aero - Electrical Engineering Intern (Summer 2023 - Current)}
+\subsection{Aeronix - Electrical Engineering Design Intern (Summer 2024)}
 \begin{CustomItemize}
-\item Use anemometers and pressure transducers to measure airflow in a blower system.
-\item Create LabView VI to collect, display, and log data from ESP32 and NI DAQ.
-\item Propose high-level design of a FADEC, evaluated both microcontroller and FPGA solutions.
-\item Perform electrical power calculations for $1.5\:MW$ generator system.
+\item Worked on project to create bit error rate tester, which featured ten 1Gbps SFP interfaces and a FMC connector.
+\item Took existing schematic (based around Zynq Ultrascale+ ZU7CG, 900-pin BGA) and adapted it for use case.
+\item Began work on modifying existing layout to reflect updated schematic.
+\item Created HTML/JS webpage and C++ HTTP server to interact with AXI peripherals loaded on FPGA.
 \end{CustomItemize}
 
-\subsection{Garrett Plant Pathology Lab - Paid Undergraduate Researcher (Fall 2020 - Current)}
+\subsection{Ionospheric Radio Lab - Undergraduate Researcher (Spring 2024 - Current)}
 \begin{CustomItemize}
-\item Program and model in R to simulate pathogen spread in Ethiopian seed trade networks.
-%\item Utilize impact network analysis, an application of graph theory.
-%\item Work with team of 3, writing paper to be published in research journal.
-\item Migrate lab codebase into an object-oriented paradigm.
-\item Design Shiny user interface to allow non-coders to run simulations.
-\item Presented research at Florida Undergraduate Research Conference in February 2022.
+\item Member of lab which focuses on studying electromagnetic phenomena in the iohosphere.
+\item Worked on project to convert ULF/VLF receiver station software from Windows to Linux.
+\item Worked on project to compare two implementations of atmospheric chemistry model, with triangular interpolation.
+\item Will travel to University of Alaska to participate in PARS 2024, and use the HAARP transmitter.
 \end{CustomItemize}
+
+\subsection{VerdeGo Aero - Electrical Engineering Intern (Summer 2023)}
+\begin{CustomItemize}
+\item Used anemometers and pressure transducers to measure airflow in a blower system.
+\item Created LabView VI to collect, display, and log data from ESP32 and NI DAQ.
+\item Proposed high-level design of a FADEC, evaluated both microcontroller and FPGA solutions.
+\item Performed electrical power calculations for $1.5\:MW$ generator system.
+\end{CustomItemize}
+
+%\subsection{Garrett Plant Pathology Lab - Paid Undergraduate Researcher (Fall 2020 - Current)}
+%\begin{CustomItemize}
+%\item Program and model in R to simulate pathogen spread in Ethiopian seed trade networks.
+%%\item Utilize impact network analysis, an application of graph theory.
+%%\item Work with team of 3, writing paper to be published in research journal.
+%\item Migrate lab codebase into an object-oriented paradigm.
+%\item Design Shiny user interface to allow non-coders to run simulations.
+%\item Presented research at Florida Undergraduate Research Conference in February 2022.
+%\end{CustomItemize}
 
 \subsection{CACI - Signal Processing Intern (Summer 2022)}
 \begin{CustomItemize}
@@ -223,13 +244,13 @@ Integrated Poduct and Process Design
 \item Worked remotely using agile methodology.
 \end{CustomItemize}
 
-\subsection{Duos Technology - Engineering Internship (Summer 2020)}
-\begin{CustomItemize}
-\item Shadowed Electrical Engineers working on a product which scanned rail cars for defects.
-\item Performed destructive failure analysis on damaged scanner unit.
-\item Worked with ground truth team to label images of rail cars.
-\item Wrote program on Raspberry Pi which provided a HTTP REST API to control lights in the scanner.
-\end{CustomItemize}
+%\subsection{Duos Technology - Engineering Internship (Summer 2020)}
+%\begin{CustomItemize}
+%\item Shadowed Electrical Engineers working on a product which scanned rail cars for defects.
+%\item Performed destructive failure analysis on damaged scanner unit.
+%\item Worked with ground truth team to label images of rail cars.
+%\item Wrote program on Raspberry Pi which provided a HTTP REST API to control lights in the scanner.
+%\end{CustomItemize}
 
 %\subsection{US Navy - Science and Engineering Apprenticeship Program (SEAP) (Summer 2019)}
 %\begin{CustomItemize}
@@ -279,7 +300,7 @@ designed and led construction of two softball dugouts for project
 \begin{CustomItemize}
 %\item Data analysis using Excel and other spreadsheet programs
 \item Fluency: Java, C, C++
-\item Competency: JavaScript/TypeScript, HTML, CSS, Go, \LaTeX{}, MATLAB, R, SQL, Verilog
+\item Competency: JavaScript, HTML, CSS, Go, \LaTeX{}, MATLAB, R, SQL, VHDL, Verilog, Julia, LabVIEW
 \end{CustomItemize}
 \hfill}
 \spacetextbox{\hfil\hfil}
@@ -287,7 +308,7 @@ designed and led construction of two softball dugouts for project
 \begin{CustomItemize}
 \item Linux, git, and Microsoft Office
 \item 3D parametric modeling and printing
-\item Arduino, ESP8266, and Raspberry Pi
+\item Embedded Systems
 \end{CustomItemize}
 }
 %\section{Community Service}
